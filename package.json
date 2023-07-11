@@ -34,6 +34,7 @@
     "passport-http": "^0.3.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "pg": "^8.11.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4",
     "serverless-finch": "^4.0.3",

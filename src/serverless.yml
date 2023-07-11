@@ -15,6 +15,12 @@ plugins:
 functions:
   main:
     handler: dist/main.handler
+    environment:
+      PGUSER: postgress
+      PGHOST: { RDS_HOST }
+      PGPASSWORD: { RDS_PASS }
+      PGDATABASE: { RDS_DB }
+      PGPORT: 5432
     events:
       - http:
           method: ANY

@@ -162,13 +162,22 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/rs-cart-api/dev/1689036654793-2023-07-11T00:50:54.793Z/rs-cart-api.zip"
+          "S3Key": "serverless/rs-cart-api/dev/1689095675983-2023-07-11T17:14:35.983Z/rs-cart-api.zip"
         },
         "Handler": "dist/main.handler",
         "Runtime": "nodejs14.x",
         "FunctionName": "rs-cart-api-dev-main",
         "MemorySize": 1024,
         "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "PGUSER": "postgress",
+            "PGHOST": "database-task8.c0spiadguonx.us-west-1.rds.amazonaws.com",
+            "PGPASSWORD": "alienWare$4p0",
+            "PGDATABASE": "rds_cloudx",
+            "PGPORT": "5432"
+          }
+        },
         "Role": {
           "Fn::GetAtt": [
             "IamRoleLambdaExecution",
@@ -180,14 +189,14 @@
         "MainLogGroup"
       ]
     },
-    "MainLambdaVersionmzfr6ffqPFHGbKF8ksrUdMEnAhAw0eY21Vbkoewx0": {
+    "MainLambdaVersiond2YXi3Ip8Uxa4h17BboM5sWl74J9NVfE7LtX8cQO8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MainLambdaFunction"
         },
-        "CodeSha256": "25snzOAwKca5IFI0M2/mknnz7n4FBHOLrr0aXPVaWJs="
+        "CodeSha256": "CjA3zUy6tKo25wwHk/p264fAvaFYji56bvxOMOanwAg="
       }
     },
     "ApiGatewayRestApi": {
@@ -312,7 +321,7 @@
         "MainLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1689036648430": {
+    "ApiGatewayDeployment1689095674626": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -375,7 +384,7 @@
     "MainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MainLambdaVersionmzfr6ffqPFHGbKF8ksrUdMEnAhAw0eY21Vbkoewx0"
+        "Ref": "MainLambdaVersiond2YXi3Ip8Uxa4h17BboM5sWl74J9NVfE7LtX8cQO8"
       },
       "Export": {
         "Name": "sls-rs-cart-api-dev-MainLambdaFunctionQualifiedArn"
