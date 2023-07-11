@@ -1,0 +1,12 @@
+insert into carts (id, user_id, created_at, updated_at) 
+values 
+	(gen_random_uuid (), gen_random_uuid (), '01/10/2023', '06/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '01/10/2023', '02/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '01/10/2023', '03/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '02/10/2023', '04/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '03/11/2023', '01/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '04/11/2023', '06/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '05/11/2023', '09/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '03/11/2023', '02/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '02/11/2023', '01/10/2023')
+	(gen_random_uuid (), gen_random_uuid (), '03/11/2023', '02/10/2023')
